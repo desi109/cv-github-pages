@@ -121,25 +121,33 @@ const experience = [
 ];
 
 const universityProjects = [
-  { name: "linkio.space", url: "https://github.com/desi109/linkio.space" },
-  { name: "Fit Yummy BAR", url: "https://github.com/desi109/fit-yummy-bar" },
+  { name: "linkio.space", url: "https://github.com/desi109/linkio-space" },
+  { name: "Fit Yummy BAR", url: "https://github.com/desi109/fit-yummy-bar-project" },
   { name: "Insertion Sort Algorithm Visualizer", url: "https://github.com/desi109/insertion-sort-algorithm-visualizer" },
-  { name: "AWS Presentation", url: "https://github.com/desi109/aws-presentation" },
-  { name: "OS — Shell Script: Sequential Numbers File", url: "https://github.com/desi109/os-task-and-presentation" },
-  { name: "Multiple Sequence Alignment — SARS-2 (gene 3) with T-Coffee", url: "https://github.com/desi109/multiple-sequence-alignment-of-10-genetic-sequences-of-sars-2-gene-3-t-coffee" },
-  { name: "Setup HTTP Server under Linux", url: "https://github.com/desi109/setup-http-server-under-linux" },
-  { name: "Software Architectures — Abstract", url: "https://github.com/desi109/software_architectures" },
-  { name: "Store Management System", url: "https://github.com/desi109/store-management-system" },
-  { name: "Smart Home Platform", url: "https://github.com/desi109/smart-home-platform" },
+  { name: "AWS Presentation", url: "https://github.com/desi109/aws-presentation/blob/master/Amazon%20Cloud%20Platform%20(AWS)%20-%20Desislava%20Milusheva.pdf" },
+  { name: "OS — Shell Script: Sequential Numbers File", url: "https://github.com/desi109/race-task/blob/master/Presentation/Course%20project_%20Operating%20Systems%20-%20Write%20a%20shell%20script%20that%20produces%20a%20file%20of%20sequential%20numbers.pdf" },
+  { name: "Multiple Sequence Alignment — SARS-2 (gene 3) with T-Coffee", url: "https://github.com/desi109/SARS-Cov-2-gene-3-multiple-sequence-alignment/blob/master/Course%20project_%20Bioinformatics%20-%20Multiple%20sequence%20alignment%20of%2010%20genetic%20sequences%20of%20SARS-2%20(gene%203)%20%E2%80%93%20T-Coffee.pdf" },
+  { name: "Setup HTTP Server under Linux", url: "https://github.com/desi109/configuring-http-server-under-linux/blob/master/Course%20project:%20Computer%20Networks%20and%20Network%20Administration%20-%20Setup%20%20HTTP%20server%20under%20Linux.pdf" },
+  { name: "Software Architectures — Abstract", url: "https://github.com/desi109/software-architectures/blob/master/Software_Architectures--abstract/Software_Architectures-abstract-Desislava_Milusheva.pdf" },
+  { name: "Store Management System", url: "https://github.com/desi109/StoreManagmentSystem_CourseProject" },
+  { name: "Smart Home Platform", url: "https://github.com/desi109/diplomna-rabota" },
   { name: "Crypto Pay", url: "https://github.com/desi109/crypto-pay" },
 ];
 
 const otherProjects = [
   { name: "Bike Company App", url: "https://github.com/desi109/bike-company-app" },
   { name: "DIZIphotography", url: "https://github.com/desi109/diziphotography" },
-  { name: "Kafka + Druid + Superset", url: "https://github.com/desi109/kafka-druid-superset" },
-  { name: "OSGi Bundle Tutorial", url: "https://github.com/desi109/osgi-bundle-tutorial" },
-  { name: "Zip Splitter Utility", url: "https://github.com/desi109/zip-splitter-utility" },
+  { name: "Kafka + Druid + Superset", url: "https://github.com/desi109/kafka-druid-superset/blob/master/Kafka%20%2B%20Druid%20%2B%20Superset.pptx" },
+  { name: "OSGi Bundle Tutorial", url: "https://github.com/desi109/osgi-and-java" },
+  { name: "Zip Splitter Utility", url: "https://github.com/desi109/zip-splitter" },
+];
+
+const profileLinks = [
+  { name: "Docker Hub", url: "https://hub.docker.com/u/desi109" },
+  { name: "Blog", url: "https://desi109.github.io/D.Milusheva/" },
+  { name: "Photography", url: "https://desi109.github.io/diziphotography" },
+  { name: "dev.to", url: "https://dev.to/desi109" },
+  { name: "Cheat sheets", url: "https://github.com/desi109/cheat-sheets" },
 ];
 
 
@@ -366,6 +374,20 @@ function Portfolio() {
           <div className="mt-8 flex justify-center gap-4 text-muted-foreground">
             <a href="https://github.com/desi109" target="_blank" rel="noreferrer" aria-label="GitHub" className="hover:text-foreground"><Github className="h-5 w-5" /></a>
             <a href="https://www.linkedin.com/in/desislava-milusheva-200574151/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-foreground"><Linkedin className="h-5 w-5" /></a>
+          </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm">
+            {profileLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground"
+              >
+                {link.name}
+                <ExternalLink className="h-3 w-3" />
+              </a>
+            ))}
           </div>
         </div>
       </section>
